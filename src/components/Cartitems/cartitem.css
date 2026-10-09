@@ -1,0 +1,314 @@
+
+/* =========================
+   MAIN CART CONTAINER
+========================= */
+
+.cartitem {
+    width: 80%;
+    margin: 80px auto;
+    color: #454545;
+    box-sizing: border-box;
+}
+
+.cartitem h1 {
+    margin-bottom: 35px;
+    color: #171717;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CART COLUMN HEADINGS
+========================= */
+
+.cartitems-format-main {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    color: #454545;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   PRODUCT ROW
+========================= */
+
+.cartitems-format {
+    display: grid;
+    grid-template-columns: 0.8fr 2fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    color: #454545;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cartitems-format p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.carticon-product-icon {
+    width: 70px;
+    height: 80px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   HORIZONTAL LINE
+========================= */
+
+.cartitem hr {
+    height: 1px;
+    margin: 0;
+    border: none;
+    background: #e2e2e2;
+}
+
+
+/* =========================
+   QUANTITY BUTTON
+========================= */
+
+.cartiteems-quantity {
+    width: 50px;
+    height: 40px;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #454545;
+    font-size: 15px;
+    cursor: default;
+}
+
+
+/* =========================
+   REMOVE ICON
+========================= */
+
+.cartitems-remove-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cartitems-remove-icon:hover {
+    transform: scale(1.15);
+}
+
+
+/* =========================
+   CART TOTALS CONTAINER
+========================= */
+
+.cartitems-down {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+
+
+/* =========================
+   CART TOTALS BOX
+========================= */
+
+.cartitems-total {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.cartitems-total h2 {
+    margin: 0 0 8px;
+    color: #171717;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SUBTOTAL / SHIPPING / TOTAL
+========================= */
+
+.cartitems-total-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 0;
+}
+
+.cartitems-total-item p {
+    margin: 0;
+    color: #555555;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.cartitems-total-item h3 {
+    margin: 0;
+    color: #171717;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.cartitems-total hr {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    border: none;
+    background: #e8e8e8;
+}
+
+
+/* =========================
+   CHECKOUT BUTTON
+========================= */
+
+.cartitems-total button {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 8px;
+    padding: 12px;
+
+    border: none;
+    border-radius: 5px;
+    background: #ff4141;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.cartitems-total button:hover {
+    background: #e52e2e;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .cartitem {
+        width: 90%;
+        margin: 60px auto;
+    }
+
+    .cartitems-format-main,
+    .cartitems-format {
+        grid-template-columns:
+            0.7fr 1.5fr 0.8fr 0.8fr 0.8fr 0.4fr;
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .carticon-product-icon {
+        width: 55px;
+        height: 65px;
+    }
+
+    .cartitems-down {
+        margin-top: 40px;
+    }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+    .cartitem {
+        width: 92%;
+        margin: 35px auto;
+        overflow-x: auto;
+    }
+
+    .cartitem h1 {
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .cartitems-format-main,
+    .cartitems-format {
+        min-width: 650px;
+        grid-template-columns: 70px 200px 80px 80px 90px 60px;
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .cartitems-format-main {
+        padding: 15px 0;
+    }
+
+    .cartitems-format {
+        padding: 15px 0;
+    }
+
+    .carticon-product-icon {
+        width: 50px;
+        height: 60px;
+    }
+
+    .cartiteems-quantity {
+        width: 42px;
+        height: 35px;
+        font-size: 13px;
+    }
+
+    .cartitems-down {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .cartitems-total {
+        max-width: 100%;
+        padding: 22px;
+    }
+
+    .cartitems-total h2 {
+        font-size: 22px;
+    }
+
+    .cartitems-total-item p {
+        font-size: 14px;
+    }
+
+    .cartitems-total-item h3 {
+        font-size: 17px;
+    }
+
+    .cartitems-total button {
+        font-size: 13px;
+    }
+}
+

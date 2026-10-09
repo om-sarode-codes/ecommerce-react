@@ -1,0 +1,117 @@
+
+.item {
+    width: 100%;
+    max-width: 350px;
+    min-width: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.item p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.item-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.item-price-new {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item-price-old {
+    color: #8c8c8c;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+/* Hover Effect */
+@media (hover: hover) {
+    .item:hover {
+        transform: scale(1.03);
+    }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+    .item {
+        max-width: 300px;
+    }
+
+    .item p {
+        font-size: 15px;
+    }
+
+    .item-price-new,
+    .item-price-old {
+        font-size: 17px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .item {
+        max-width: 100%;
+    }
+
+    .item p {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+
+    .item-price {
+        gap: 10px;
+    }
+
+    .item-price-new,
+    .item-price-old {
+        font-size: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .item p {
+        font-size: 13px;
+        margin: 6px 0;
+    }
+
+    .item-price {
+        gap: 8px;
+    }
+
+    .item-price-new,
+    .item-price-old {
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 320px) {
+    .item p {
+        font-size: 12px;
+    }
+
+    .item-price-new,
+    .item-price-old {
+        font-size: 13px;
+    }
+}
+

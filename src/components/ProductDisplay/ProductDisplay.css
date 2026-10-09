@@ -1,0 +1,260 @@
+.productdisplay {
+    display: flex;
+    margin: 0px 170px;
+    gap: 50px;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.productdisplay-left {
+    display: flex;
+    gap: 17px;
+}
+
+.productdisplay-img-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.productdisplay-img-list img {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.productdisplay-img {
+    display: flex;
+}
+
+.productdisplay-main-img {
+    width: 586px;
+    height: 700px;
+    object-fit: cover;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.productdisplay-right {
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.productdisplay-right h1 {
+    color: #3d3d3d;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+/* ================= STAR ================= */
+
+.productdisplay-right-star {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    gap: 5px;
+    color: #1c1c1c;
+    font-size: 16px;
+}
+
+.productdisplay-right-star img {
+    width: 20px;
+    height: 20px;
+}
+
+.productdisplay-right-star p {
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+/* ================= PRICE ================= */
+
+.productdisplay-rigth-prices {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.productdisplay-rigth-price-old {
+    color: #818181;
+    font-size: 22px;
+    text-decoration: line-through;
+}
+
+.productdisplay-rigth-price-new {
+    color: #ff4141;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.productdisplay-rigth-description {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 15px;
+    max-width: 550px;
+}
+
+/* ================= SIZE ================= */
+
+.productdisplay-rigth-size {
+    margin-top: 25px;
+}
+
+.productdisplay-rigth-size h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Size buttons */
+
+.productdisplay-rigth-size > div {
+    display: flex;
+    gap: 12px;
+}
+
+.productdisplay-rigth-size > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 55px;
+    height: 50px;
+
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.productdisplay-rigth-size > div > div:hover {
+    border-color: #ff4141;
+}
+
+/* ================= ADD TO CART ================= */
+
+.productdisplay-right button {
+    width: 220px;
+    height: 55px;
+
+    margin-top: 30px;
+
+    border: none;
+    background-color: #ff4141;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.productdisplay-right button:hover {
+    background-color: #e83232;
+}
+
+/* ================= CATEGORY / TAGS ================= */
+
+.productdisplay-rigth-category {
+    margin-top: 15px;
+    color: #555;
+    font-size: 15px;
+}
+
+.productdisplay-rigth-category span {
+    color: #222;
+    font-weight: 600;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+
+    .productdisplay {
+        margin: 0px 60px;
+        gap: 30px;
+    }
+
+    .productdisplay-main-img {
+        width: 450px;
+        height: 580px;
+    }
+
+    .productdisplay-right h1 {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .productdisplay {
+        flex-direction: column;
+        margin: 30px;
+    }
+
+    .productdisplay-left {
+        justify-content: center;
+    }
+
+    .productdisplay-main-img {
+        width: 500px;
+        height: 600px;
+    }
+
+    .productdisplay-right {
+        margin: 20px 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .productdisplay {
+        margin: 20px;
+    }
+
+    .productdisplay-left {
+        gap: 10px;
+    }
+
+    .productdisplay-img-list {
+        gap: 8px;
+    }
+
+    .productdisplay-img-list img {
+        width: 60px;
+        height: 75px;
+    }
+
+    .productdisplay-main-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .productdisplay-right h1 {
+        font-size: 26px;
+    }
+
+    .productdisplay-rigth-price-new {
+        font-size: 26px;
+    }
+
+    .productdisplay-right button {
+        width: 100%;
+    }
+}
